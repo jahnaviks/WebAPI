@@ -1,0 +1,10 @@
+C:\Users\jahnavis\Documents\Visual Studio 2013\Projects\RegisterAPI\ModelLayer\bin\ModelLayer.dll
+C:\Users\jahnavis\Documents\Visual Studio 2013\Projects\RegisterAPI\ModelLayer\bin\ModelLayer.pdb
+C:\Users\jahnavis\Documents\Visual Studio 2013\Projects\RegisterAPI\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache
+C:\Users\jahnavis\Documents\Visual Studio 2013\Projects\RegisterAPI\ModelLayer\obj\Debug\ModelLayer.dll
+C:\Users\jahnavis\Documents\Visual Studio 2013\Projects\RegisterAPI\ModelLayer\obj\Debug\ModelLayer.pdb
+C:\Users\jahnavis\Documents\Visual Studio 2013\RegisterAPI\ModelLayer\bin\ModelLayer.dll
+C:\Users\jahnavis\Documents\Visual Studio 2013\RegisterAPI\ModelLayer\bin\ModelLayer.pdb
+C:\Users\jahnavis\Documents\Visual Studio 2013\RegisterAPI\ModelLayer\obj\Debug\ModelLayer.dll
+C:\Users\jahnavis\Documents\Visual Studio 2013\RegisterAPI\ModelLayer\obj\Debug\ModelLayer.pdb
+C:\Users\jahnavis\Documents\Visual Studio 2013\RegisterAPI\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache

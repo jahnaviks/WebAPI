@@ -1,0 +1,109 @@
+﻿
+<html>
+<head>
+    <title>Register</title>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            jQuery.support.cors = true;
+            $("#register").click(function () {
+                jQuery.support.cors = true;
+                var firtname = $("#txt0").val();
+                var lastname = $("#txt1").val();
+                var phonenumber = $("#txt2").val();
+                var address = $("#txt3").val();
+                var emailid = $("#txt4").val();
+                var password = $("#txt5").val();
+                $.ajax({
+                    url: "http://localhost:50255/api/Register/Register",
+                    type: "POST",
+                    ContentType: "application/json",
+                    dataType: "json",
+                    data: '{"FirstName":"' + firtname+ '","LastName":"'+ lastname +'","PhoneNumber":"'+phonenumber+'","Email":"'+emailid+'"Address":"'+address+'","Password":"'+password+'"}',
+                    Success: function (resultdata) {
+                        alert("Registered successfully");
+                    },
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+
+
+<div style="color: #334d4d; text-align: center; background-color: #d1e0e0; width: 1350px">
+    <h2>Registration Page</h2>
+</div>
+    <div style="background-color:#d1e0e0;width:1350px">
+        @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>
+                    <p><b>FirstName</b></p>
+                </td>
+                <td>
+                    <input id="fname" name="fname" type="text" pattern="[a-zA-Z0-9 ]{6,10}" title="can have Alphabets and space of 6 to 10 characters." required oninvalid="this.setCustomValidity('Please Enter First name')" />
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <p><b>Last Name</b></p>
+                </td>
+                <td>
+                    <input id="lname" name="lname" type="text" pattern="[a-zA-Z0-9 ]{6,10}" title="can have Alphabets and space of 6 to 10 characters." required oninvalid="this.setCustomValidity('Please Enter last name')" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><b>Email</b></p>
+                </td>
+                <td>
+                    <input id="email" name="email" type="email" pattern="/^([\w-\.]+\u0040([\w-]+\.)+[\w-]{2,4})?$/" title="Please Enter Valid Email ID" required oninvalid="this.setCustomValidity('Please Enter email')" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><b>Mobile Number</b></p>
+                </td>
+                <td>
+                    <input id="mobile" name="mobile" type="number" min="1000000000" max="9999999999" title="Please Enter Valid Mobile number" required oninvalid="this.setCustomValidity('Please Enter mobile number')" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><b>Address</b></p>
+                </td>
+                <td>
+                    <input id="address" name="address" type="text" pattern="[a-zA-Z0-1 ]{1,30}" title="can have Alphabets, numbers and space of upto 30 characters." required oninvalid="this.setCustomValidity('Please Enter address')" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><b>Password</b></p>
+                </td>
+                <td>
+                    <input id="password" name="password" type="password" required oninvalid="this.setCustomValidity('Please Enter password')" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$\u0040$!%*#?&])[A-Za-z\d$\u0040$!%*#?&]{8,}$" title="Minimum 8 characters atleast 1 Alphabet, 1 Number and 1 Special Character" />
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="register" type="submit" value="Register" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+</body>
+</html>

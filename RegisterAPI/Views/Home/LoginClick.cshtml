@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+    <title>Logged in page</title>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            jQuery.support.cors = true;
+            var customername, age, address, emailid, city;
+            $("#submit").click(function () {
+                $.ajax({
+                    url: "http://localhost:50255/api/Register/?ValidateLogin=" + $("#txt0").val(),
+                    type: "GET",
+                    ContentType: "application/json",
+                    dataType: "json",
+                    success: function (resultdata) {
+                        console.log(resultdata);
+                    },
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
